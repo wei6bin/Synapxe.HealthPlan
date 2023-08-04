@@ -1,0 +1,76 @@
+{
+  "resourceType": "Bundle",
+  "id": "operationDefinitions",
+  "meta": {
+    "lastUpdated": "2021-04-22T05:58:59.2666488+00:00"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "HealthPlan-put-health-plan",
+        "name": "HealthPlan-put-health-plan-name",
+        "title": "CRUD_create_health_plan",
+        "status": "active",
+        "kind": "operation",
+        "affectsState": true,
+        "description": "Create patient's Health Plan",
+        "system": false,
+        "type": true,
+        "instance": false,
+        "parameter": [
+          {
+            "name": "resource",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "Input the Care Plan to be created with details",
+            "type": "CarePlan"
+          },
+          {
+            "name": "return",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "Return the OperationOutcome",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "HealthPlan-get-health-plan",
+        "name": "HealthPlan-get-health-plan",
+        "title": "CRUD_get_health_plan",
+        "status": "active",
+        "kind": "operation",
+        "affectsState": false,
+        "description": "For SoE to retrieve the summary of  latest or selected health plan.",
+        "system": false,
+        "type": true,
+        "instance": false,
+        "parameter": [
+          {
+            "name": "patient-nric",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "NRIC - Patient's identifier.",
+            "type": "string"
+          },
+          {
+            "name": "hci-code",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "Institution Healthcare Code.",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

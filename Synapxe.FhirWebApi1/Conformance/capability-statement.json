@@ -1,0 +1,88 @@
+{
+  "resourceType": "CapabilityStatement",
+  "version": "1.0.0",
+  "status": "draft",
+  "experimental": false,
+  "kind": "capability",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+json",
+    "json"
+  ],
+  "rest": [
+    {
+      "resource": [
+        {
+          "type": "CapabilityStatement",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Returns the Capability Statement."
+            }
+          ],
+          "versioning": "no-version"
+        },
+        {
+          "type": "OperationDefinition",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Returns the Operation Definition."
+            }
+          ],
+          "versioning": "no-version"
+        },
+        {
+          "type": "SearchParameter",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Returns the Search Parameter."
+            }
+          ],
+          "versioning": "no-version"
+        },
+        {
+          "type": "StructureDefinition",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Returns the Structure Definition."
+            }
+          ],
+          "versioning": "no-version"
+        },
+        {
+          "type": "ValueSet",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Returns the Structure Definition."
+            }
+          ],
+          "versioning": "no-version"
+        },
+        {
+          "type": "CarePlan",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": "Search CarePlan."
+            }
+          ],
+          "versioning": "versioned",
+          "operation": [
+            {
+              "name": "put-health-plan",
+              "definition": "OperationDefinition/HealthPlan-put-health-plan"
+            },
+            {
+              "name": "get-health-plan",
+              "definition": "OperationDefinition/HealthPlan-get-health-plan"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

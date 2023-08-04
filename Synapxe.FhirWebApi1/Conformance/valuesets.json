@@ -1,0 +1,434 @@
+{
+  "resourceType": "Bundle",
+  "id": "valueSets",
+  "meta": {
+    "lastUpdated": "2021-05-05T08:04:45.3420489+00:00"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-care-plan-category",
+        "url": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+        "version": "0.1.0",
+        "name": "hsg-care-plan-category",
+        "title": "hsg-care-plan-category",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Care Plan Category",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+              "concept": [
+                {
+                  "code": "pophealth-enrolment",
+                  "display": "Pophealth Enrolment"
+                },
+                {
+                  "code": "pophealth-plan",
+                  "display": "Pophealth Plan"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-health-goal",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-health-goal",
+        "url": "http://ihis.sg/ValueSet/hsg-health-goal",
+        "version": "0.1.0",
+        "name": "hsg-health-goal",
+        "title": "hsg-health-goal",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Health Goal",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-health-goal",
+              "concept": [
+                {
+                  "code": "G1",
+                  "display": "BMI Goal"
+                },
+                {
+                  "code": "G2",
+                  "display": "Smoking Cessation Goal"
+                },
+                {
+                  "code": "G3",
+                  "display": "Diabetes Goal"
+                },
+                {
+                  "code": "G4",
+                  "display": "Hypertension Goal"
+                },
+                {
+                  "code": "G5",
+                  "display": "Hyperlipidaemia Goal"
+                },
+                {
+                  "code": "G6",
+                  "display": "Programme Participation Goal"
+                },
+                {
+                  "code": "G7",
+                  "display": "Active Ageing Goal"
+                },
+                {
+                  "code": "G8",
+                  "display": "Exercise Goal"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-goal-measure",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-goal-measure",
+        "url": "http://ihis.sg/ValueSet/hsg-goal-measure",
+        "version": "0.1.0",
+        "name": "hsg-goal-measure",
+        "title": "hsg-goal-measure",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Goal Measure",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+              "concept": [
+                {
+                  "code": "GM001",
+                  "display": "Weight"
+                },
+                {
+                  "code": "GM002",
+                  "display": "Quit Smoking"
+                },
+                {
+                  "code": "GM003",
+                  "display": "Hba1c"
+                },
+                {
+                  "code": "GM004",
+                  "display": "BP1"
+                },
+                {
+                  "code": "GM005",
+                  "display": "Monitor Blood Pressure Frequency"
+                },
+                {
+                  "code": "GM006",
+                  "display": "LDL-C"
+                },
+                {
+                  "code": "GM007",
+                  "display": "Exercise"
+                },
+                {
+                  "code": "PRG001",
+                  "display": "Weight Management"
+                },
+                {
+                  "code": "PRG002",
+                  "display": "Smoking Cessation"
+                },
+                {
+                  "code": "PRG003",
+                  "display": "Chronic disease-specific"
+                },
+                {
+                  "code": "ACT001",
+                  "display": "Physical activities sign-up"
+                },
+                {
+                  "code": "ACT002",
+                  "display": "Mind-stimulating and social activities sign-up"
+                },
+                {
+                  "code": "ACT003",
+                  "display": "Vital Signs Monitoring"
+                },
+                {
+                  "code": "OTH001",
+                  "display": "Others"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-healthplan-activity-type",
+        "url": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+        "version": "0.1.0",
+        "name": "hsg-healthplan-activity-type",
+        "title": "hsg-healthplan-activity-type",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Health Plan Activity Type",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+              "concept": [
+                {
+                  "code": "recommended-next-visit",
+                  "display": "Recommended Next Visit"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/unitsofmeasure.org",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "unitsofmeasure.org",
+        "url": "/ValueSet/unitsofmeasure.org",
+        "version": "0.1.0",
+        "name": "unitsofmeasure.org",
+        "title": "unitsofmeasure.org",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "UCUM",
+        "compose": {
+          "include": [
+            {
+              "system": "http://unitsofmeasure.org",
+              "concept": [
+                {
+                  "code": "mg/dL",
+                  "display": "mg/dL"
+                },
+                {
+                  "code": "mmol/L",
+                  "display": "mmol/L"
+                },
+                {
+                  "code": "d",
+                  "display": "Day"
+                },
+                {
+                  "code": "wk",
+                  "display": "Week"
+                },
+                {
+                  "code": "mo",
+                  "display": "Month"
+                },
+                {
+                  "code": "kg",
+                  "display": "kg"
+                },
+                {
+                  "code": "mm[Hg]",
+                  "display": "mm[Hg]"
+                },
+                {
+                  "code": "%",
+                  "display": "%"
+                },
+                {
+                  "code": "m",
+                  "display": "m"
+                },
+                {
+                  "code": "kg/m2",
+                  "display": "kg/m2"
+                },
+                {
+                  "code": "cm",
+                  "display": "cm"
+                },
+                {
+                  "code": "μmol/L",
+                  "display": "μmol/L"
+                },
+                {
+                  "code": "ml/min/1.73m2",
+                  "display": "ml/min/1.73m2"
+                },
+                {
+                  "code": "mg/mmol",
+                  "display": "mg/mmol"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/loinc.org",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "loinc.org",
+        "url": "/ValueSet/loinc",
+        "version": "0.1.0",
+        "name": "loinc.org",
+        "title": "loinc.org",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "LOINC",
+        "compose": {
+          "include": [
+            {
+              "system": "http://loinc.org",
+              "concept": [
+                {
+                  "code": "4548-4",
+                  "display": "HbA1c"
+                },
+                {
+                  "code": "14771-0",
+                  "display": "Fasting Plasma Glucose (FPG) (mmol/L)"
+                },
+                {
+                  "code": "14759-5",
+                  "display": "Oral Glucose Tolerance Test (OGTT) (mmol/L)"
+                },
+                {
+                  "code": "2089-1",
+                  "display": "LDL-C (mg/dL)"
+                },
+                {
+                  "code": "22748-8",
+                  "display": "LDL-C (mmol/L)"
+                },
+                {
+                  "code": "2085-9",
+                  "display": "HDL-C (mg/dL)"
+                },
+                {
+                  "code": "14646-4",
+                  "display": "HDL-C (mmol/L)"
+                },
+                {
+                  "code": "2571-8",
+                  "display": "Triglycerides (mg/dL)"
+                },
+                {
+                  "code": "14927-8",
+                  "display": "Triglycerides (mmol/L)"
+                },
+                {
+                  "code": "2093-3",
+                  "display": "Total Cholesterol (mg/dL)"
+                },
+                {
+                  "code": "14647-2",
+                  "display": "Total Cholesterol (mmol/L)"
+                },
+                {
+                  "code": "14682-9",
+                  "display": "Serum Creatinine (μmol/L)"
+                },
+                {
+                  "code": "62238-1",
+                  "display": "eGFR (ml/min/1.73m2)"
+                },
+                {
+                  "code": "30000-4",
+                  "display": "Urine ACR (mg/mmol)"
+                },
+                {
+                  "code": "34366-5",
+                  "display": "Urine PCR (mg/mmol)"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-condition-category",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-condition-category",
+        "url": "http://ihis.sg/ValueSet/hsg-condition-category",
+        "version": "0.1.0",
+        "name": "hsg-condition-category",
+        "title": "hsg-condition-category",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Condition Category",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-condition-category",
+              "concept": [
+                {
+                  "code": "patient-condition-tag",
+                  "display": "Patient Condition Tag"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ihis.sg/ValueSet/hsg-condition-tag",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "hsg-condition-tag",
+        "url": "http://ihis.sg/ValueSet/hsg-condition-tag",
+        "version": "0.1.0",
+        "name": "hsg-condition-tag",
+        "title": "hsg-condition-tag",
+        "status": "active",
+        "date": "2021-12-01",
+        "publisher": "Integrated Health Information Systems Pte Ltd (IHiS)",
+        "description": "Patient Condition Tag",
+        "compose": {
+          "include": [
+            {
+              "system": "http://ihis.sg/ValueSet/hsg-condition-tag",
+              "concept": [
+                {
+                  "code": "DM",
+                  "display": "Diabetes Mellitus"
+                },
+                {
+                  "code": "HP",
+                  "display": "Hyperlipidemia (Lipid Disorders)"
+                },
+                {
+                  "code": "HT",
+                  "display": "Hypertension"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

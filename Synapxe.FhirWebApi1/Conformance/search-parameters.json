@@ -1,0 +1,10 @@
+{
+  "resourceType": "Bundle",
+  "id": "searchParameters",
+  "meta": {
+    "lastUpdated": "2021-05-05T08:04:45.3420489+00:00"
+  },
+  "type": "collection",
+  "entry": [
+  ]
+}

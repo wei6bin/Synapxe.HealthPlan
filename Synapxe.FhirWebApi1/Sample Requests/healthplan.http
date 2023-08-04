@@ -1,0 +1,485 @@
+@baseUrl=https://localhost:5001
+@applicationId=test-app
+
+### Create HealthPlan with Goal 1:
+POST {{baseUrl}}/CarePlan/$put-health-plan
+X-Ihis-SourceApplication: {{applicationId}}
+Content-Type: application/fhir+json
+
+{
+    "resourceType": "CarePlan",
+    "extension": [
+        {
+            "url": "http://ihis.sg/extension/performer",
+            "valueIdentifier": {
+                "system": "http://ihis.sg/identifier/prs",
+                "value": "M12345C"
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+                    "code": "pophealth-plan"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "type": "Patient",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/nric",
+            "value": "S0013168A"
+        }
+    },
+    "contained": [
+        {
+            "resourceType": "Goal",
+            "id": "f873f0480edf4e7da98c01be4c05ad91",
+            "text":{
+                "status":"empty",
+                "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+            },
+            "lifecycleStatus": "active",
+            "description": {
+                "coding": [
+                    {
+                        "system": "http://ihis.sg/ValueSet/hsg-health-goal",
+                        "code": "G1",
+                        "display": "BMI Goal"
+                    }
+                ]
+            },
+            "target": [
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "GM001",
+                                "display": "Weight"
+                            }
+                        ]
+                    },
+                    "detailQuantity": {
+                        "value": 1.0,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "kg"
+                    },
+                    "dueDuration": {
+                        "value": 1,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mo"
+                    }
+                }
+            ]
+        }
+    ],
+    "period": {
+        "start": "2020-04-01T10:30:01+08:00"
+    },
+    "author": {
+        "type": "Organization",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/hci-code",
+            "value": "poly-1"
+        }
+    },
+    "goal": [
+        {
+            "reference": "#f873f0480edf4e7da98c01be4c05ad91"
+        }
+    ],
+    "activity": [
+        {
+            "detail": {
+                "kind": "Appointment",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+                            "code": "recommended-next-visit"
+                        }
+                    ]
+                },
+                "status": "scheduled",
+                "scheduledTiming": {
+                    "event": [
+                        "2023-10"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+### Create HealthPlan with Goal 5:
+POST {{baseUrl}}/CarePlan/$put-health-plan
+X-Ihis-SourceApplication: {{applicationId}}
+Content-Type: application/fhir+json
+
+{
+    "resourceType": "CarePlan",
+    "extension": [
+        {
+            "url": "http://ihis.sg/extension/performer",
+            "valueIdentifier": {
+                "system": "http://ihis.sg/identifier/prs",
+                "value": "M12345C"
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+                    "code": "pophealth-plan"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "type": "Patient",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/nric",
+            "value": "S0013168A"
+        }
+    },
+    "contained": [
+        {
+            "resourceType": "Goal",
+            "id": "f873f0480edf4e7da98c01be4c05ad95",
+            "lifecycleStatus": "active",
+            "description": {
+                "coding": [
+                    {
+                        "system": "http://ihis.sg/ValueSet/hsg-health-goal",
+                        "code": "G5",
+                        "display": "Hyperlipidaemia Goal"
+                    }
+                ]
+            },
+            "target": [
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "GM006",
+                                "display": "LDL-C"
+                            }
+                        ]
+                    },
+                    "detailQuantity": {
+                        "value": 2.1,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mmol/L"
+                    },
+                    "dueDuration": {
+                        "value": 1,
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mo"
+                    }
+                }
+            ]
+        }
+    ],
+    "period": {
+        "start": "2020-04-01T10:30:01+08:00"
+    },
+    "author": {
+        "type": "Organization",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/hci-code",
+            "value": "poly-1"
+        }
+    },
+    "goal": [
+        {
+            "reference": "#f873f0480edf4e7da98c01be4c05ad95"
+        }
+    ],
+    "activity": [
+        {
+            "detail": {
+                "kind": "Appointment",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+                            "code": "recommended-next-visit"
+                        }
+                    ]
+                },
+                "status": "scheduled",
+                "scheduledTiming": {
+                    "event": [
+                        "2023-10"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+                
+### Create HealthPlan with Goal 6:
+POST {{baseUrl}}/CarePlan/$put-health-plan
+X-Ihis-SourceApplication: {{applicationId}}
+Content-Type: application/fhir+json
+
+{
+    "resourceType": "CarePlan",
+    "extension": [
+        {
+            "url": "http://ihis.sg/extension/performer",
+            "valueIdentifier": {
+                "system": "http://ihis.sg/identifier/prs",
+                "value": "M12345C"
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+                    "code": "pophealth-plan"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "type": "Patient",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/nric",
+            "value": "S0013168A"
+        }
+    },
+    "contained": [
+        {
+            "resourceType": "Goal",
+            "id": "f873f0480edf4e7da98c01be4c05ad96",
+            "lifecycleStatus": "active",
+            "description": {
+                "coding": [
+                    {
+                        "system": "http://ihis.sg/ValueSet/hsg-health-goal",
+                        "code": "G6",
+                        "display": "Programme Participation Goal"
+                    }
+                ]
+            },
+            "target": [
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "PRG001",
+                                "display": "Weight Management"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "PRG002",
+                                "display": "Smoking Cessation"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "PRG003",
+                                "display": "Chronic disease-specific"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "measure": {
+                        "coding": [
+                            {
+                                "system": "http://ihis.sg/ValueSet/hsg-goal-measure",
+                                "code": "OTH001",
+                                "display": "Others"
+                            }
+                        ],
+                        "text": "A"
+                    }
+                }
+            ]
+        }
+    ],
+    "period": {
+        "start": "2020-04-01T10:30:01+08:00"
+    },
+    "author": {
+        "type": "Organization",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/hci-code",
+            "value": "poly-1"
+        }
+    },
+    "goal": [
+        {
+            "reference": "#f873f0480edf4e7da98c01be4c05ad96"
+        }
+    ],
+    "activity": [
+        {
+            "detail": {
+                "kind": "Appointment",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+                            "code": "recommended-next-visit"
+                        }
+                    ]
+                },
+                "status": "scheduled",
+                "scheduledTiming": {
+                    "event": [
+                        "2023-10"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+### Create HealthPlan with Condition Tag:
+POST {{baseUrl}}/CarePlan/$put-health-plan
+X-Ihis-SourceApplication: {{applicationId}}
+Content-Type: application/fhir+json
+
+{
+    "resourceType": "CarePlan",
+    "extension": [
+        {
+            "url": "http://ihis.sg/extension/performer",
+            "valueIdentifier": {
+                "system": "http://ihis.sg/identifier/prs",
+                "value": "M12345C"
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://ihis.sg/ValueSet/hsg-care-plan-category",
+                    "code": "pophealth-plan"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "type": "Patient",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/nric",
+            "value": "S0013168A"
+        }
+    },
+    "contained": [
+		{
+			"resourceType": "Condition",
+			"id": "f873f0480edf4e7da98c01be4c05ad99",
+			"category": [{
+				"coding": [{
+					"system": "http://ihis.sg/ValueSet/hsg-condition-category",
+					"code": "patient-condition-tag"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://ihis.sg/ValueSet/hsg-condition-tag",
+					"code": "DM"
+				}]
+			}
+		},
+		{
+			"resourceType": "Condition",
+			"id": "f873f0480edf4e7da98c01be4c050705",
+			"category": [{
+				"coding": [{
+					"system": "http://ihis.sg/ValueSet/hsg-condition-category",
+					"code": "patient-condition-tag"
+				}]
+			}],
+			"code": {
+				"coding": [{
+					"system": "http://ihis.sg/ValueSet/hsg-condition-tag",
+					"code": "HP"
+				}]
+			}
+		}
+    ],
+    "period": {
+        "start": "2020-04-01T10:30:01+08:00"
+    },
+    "author": {
+        "type": "Organization",
+        "identifier": {
+            "system": "http://ihis.sg/identifier/hci-code",
+            "value": "poly-1"
+        }
+    },
+	"addresses": [
+        {
+			"reference": "#f873f0480edf4e7da98c01be4c05ad99"
+		},
+		{
+			"reference": "#f873f0480edf4e7da98c01be4c050705"
+		}
+	],
+    "activity": [
+        {
+            "detail": {
+                "kind": "Appointment",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://ihis.sg/ValueSet/hsg-healthplan-activity-type",
+                            "code": "recommended-next-visit"
+                        }
+                    ]
+                },
+                "status": "scheduled",
+                "scheduledTiming": {
+                    "event": [
+                        "2023-10"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+### Search by Post Cancelled Appointment Request:
+# @name searchCancelledAppointmentRequest
+POST {{baseUrl}}/CarePlan/_search
+X-Ihis-SourceApplication: {{applicationId}}
+Content-Type: application/x-www-form-urlencoded
+
+status=active&category=pophealth-plan&_total=accurate&_count=4&_sort=-_lastUpdated&_summary=False&_elements=id,meta,author,activity,period&_skip=1
